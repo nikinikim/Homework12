@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Library {
 
     private Book[] books;
@@ -36,5 +38,28 @@ public class Library {
                 return;
             }
         }
+    }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Library library = (Library) o;
+        return Arrays.equals(books, library.books);
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(books);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Library:");
+        for(Book book : books){
+            if (book != null);
+            sb.append("\n").append(book);
+        }
+        return sb.toString();
     }
 }
