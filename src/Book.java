@@ -38,6 +38,6 @@ public class Book {
     }
     @Override
     public String toString() {
-        return String.format("%s: %s: %d", author, bookName, releaseYear);
+        return String.format("%s: %s: %d", author.toString(), bookName, releaseYear);
     }
 }
